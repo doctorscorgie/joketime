@@ -1,0 +1,14 @@
+{% extends 'jokes/base.html' %}
+{% block content %}
+  <p>Joke Type: {{ joketype }}</p>
+  <p>Jokes:</p>
+  <ul>
+  {% for joke in jokes %}
+    <li>
+      <p>{{ joke.text|linebreaks }}</p>
+    </li>
+  {% empty %}
+    <li>There are no entries for this joke type yet.</li>
+  {% endfor %}
+  </ul>
+{% endblock content %}

@@ -50,12 +50,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'joketime.urls'
+ROOT_URLCONF = 'jokes.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["joketime/templates"],
+        'DIRS': ["jokes/templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -1,8 +1,10 @@
 from django.urls import path
 from . import views
 
-urlpatterns = [
-    path("", views.joke_index, name="joke_index"),
-    path("<int:pk>/", views.joke_detail, name="joke_detail"),
-    path("<category>/", views.joke_category, name="joke_category"),
+app_name='jokes'
+urlpatterns=[
+    #Home page
+    path('',views.index,name='index'),
+    path('joketypes',views.joketypes,name='joketypes'),
+    path('joketypes/<int:topic_id>',views.joketype,name='joketype'),
 ]

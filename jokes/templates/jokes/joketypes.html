@@ -1,0 +1,13 @@
+{% extends "jokes/base.html" %}
+{% block content %}
+<p>Topics:</p>
+<ul>
+  {% for joketype in joketypes %}
+    <li>
+      <a href="{% url 'jokes:joketype' joketype.id %}">{{joketype}}</a>
+    </li>
+  {% empty %}
+    <li>No topics have been added yet.</li>
+  {% endfor %}
+</ul>
+{% endblock content %}
